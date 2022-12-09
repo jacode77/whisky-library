@@ -1,2 +1,24 @@
-<h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
+<section class="container">
+<h1 class="display-3">Listings</h1>
+    <section class="container">
+        <div class="row row-cols-sm1 rows-cols-md2 row-cols-lg4">
+            <%@listings.each do |listing|%>
+                <div class="col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <%# <img src="..." class="card-img-top" alt="..."> %>
+                        <%=image_tag "placeholder.jpg", alt: "Whisky", class: "card-img-top" %>
+                        <div class="card-body">
+                            <h5 class="card-title"><%=listing.title%></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text"><%=listing.description%></p>
+                            <div class="d-flex justify-content-between">
+                                <h5><%=format_price(listing.price)%></h5>
+                                <%=link_to "See More", listing_path(listing.id), class: "btn btn-outline-primary"%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <%end%>
+        </div>
+    </section>
+</section>
