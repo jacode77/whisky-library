@@ -7,8 +7,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%# <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", "pages", "listings", "data-turbo-track": "reload" %>
+    <%# <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %> 
     <%= javascript_importmap_tags %>
   </head>
 
@@ -17,9 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <%flash.each do |key, value| %>
         <div class="alert alert-<%=alert_subclass(key)%> alert-dismissible fade show" role="alert">
-        <%=value%>
-        <%puts `>>>> #{value} <<<<` %>
-        <%puts `>>>> #{key} <<<<` %>
+          <%=value%>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
