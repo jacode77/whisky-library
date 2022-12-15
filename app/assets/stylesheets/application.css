@@ -13,6 +13,17 @@
  *= require_tree .
  *= require_self
  */
-// @import "bootstrap";
-@import "pages";
-@import "listings";
+.main-background {
+  height: 90vh;
+  width: 100%;
+  background-image: url("main-bg.jpg");
+  background-size: cover;
+  color: fuchsia;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.listing-title {
+  color: fuchsia;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/*# sourceMappingURL=application.css.map */
