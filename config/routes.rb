@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#home"
-  get "/restricted", to: "pages#restricted"
+  get "restricted", to: "pages#restricted"
   get "listings", to: "listings#index", as: "listings"
   post "listings", to: "listings#create"
   get "listings/new", to: "listings#new", as: "new_listing"

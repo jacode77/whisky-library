@@ -31,3 +31,6 @@ if Brand.count == 0
         puts "Created #{b}"
     end
 end
+
+# Listing.create(user_id: 1, category_id: 1, brand_id: 2, country_id: 4, title: "Glenmorangie 30 Years - Oloroso Sherry Finish", price: 5500000, year: 2004, sold: false, description: "First filled into ex-Bourbon hogsheads in 1972, it was married in Oloroso sherry butts from December 1989 and bottled without chill filtration at cask strength in 2004.")
+# Listing.create(user_id: 1, category_id: 1, brand_id: 7, country_id: 1, title: "Yamazaki 2016 Limited Edition", price: 500000, year: 2016, sold: false, description: "This is a blend of young single malts, matured in American oak casks, Bourbon barrels, European oak barrels, Sherry and Port Wine casks, with some of it having been aged over 20 years.")
