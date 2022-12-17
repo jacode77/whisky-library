@@ -16,7 +16,14 @@
         <h4 class="text-muted">Category: <%=@listing.category_id%></h4>
         <%= puts @listing.category_id %>
         <h4 class="text-muted">Description: <%=@listing.description%></h4>
+
+        <div class="container">
+        <%if current_user && current_user.id == @listing.user_id%>
+            <div class="d-flex justify-content-equally">
+                <%= link_to "Edit", edit_listing_path(@listing.id), class: "btn btn-warning mr-2" %>
+                <%= link_to "Delete", @listing, method: :delete, class: "btn btn-danger mr-2", data: {confirm: "Are you sure you want to delete this listing?"} %>
+            </div>
+        <%end%>
     </div>
-    <%# <div class="container">
-    </div> %>
+    </div>
 </section>
