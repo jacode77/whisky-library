@@ -58,7 +58,7 @@ def authorize_user
 end
 
 def listing_params
-  params.require(:listing).permit(:title, :brand_id, :year, :price, :category_id, :country_id, :description)
+  params.require(:listing).permit(:title, :brand_id, :year, :price, :category_id, :country_id, :description, :picture)
 end
 
 def set_listing
